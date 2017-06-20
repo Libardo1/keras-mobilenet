@@ -3,7 +3,7 @@
 Inspired by:
     https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py
 
-With alpha=1, not shallow, hit 0.8826 loss after 20 epochs (about 74.68%
+With alpha=1, shallow=False, hit 0.8826 loss after 20 epochs (about 74.68%
 accuracy). This is starting from scratch, adam optimizer with default settings.
 '''
 # Path hack.
