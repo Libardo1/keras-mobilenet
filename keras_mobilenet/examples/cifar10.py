@@ -2,6 +2,9 @@
 
 Inspired by:
     https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py
+
+With alpha=1, not shallow, hit 0.8826 loss after 20 epochs (about 74.68%
+accuracy). This is starting from scratch, adam optimizer with default settings.
 '''
 # Path hack.
 import sys, os
@@ -30,7 +33,7 @@ x_test /= 255
 
 # Get the model and compile it.
 img_input = keras.layers.Input(shape=(32, 32, 3))
-model = MobileNet(input_tensor=img_input, classes=num_classes)
+model = MobileNet(input_tensor=img_input, alpha=1, classes=num_classes)
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
